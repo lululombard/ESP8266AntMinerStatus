@@ -38,7 +38,7 @@ Use the [ESP8266 core for Arduino](https://github.com/esp8266/Arduino) and flash
 
 # Donations
 Donations are welcome in the following currencies :
-BTC : 34Pn2i3v4FnwgEMfQq9mAHktkVpNxgcYgj
-BCH : 1JaXNHsCSv4KwU5mY8qCCgnJj7sKuxPxF5
-DGB : DMMnWxmyp4iU1TKCV1eTNpspmNWtRBWeLC
-[PayPal](https://www.paypal.me/lululombardfr)
+* BTC : 34Pn2i3v4FnwgEMfQq9mAHktkVpNxgcYgj
+* BCH : 1JaXNHsCSv4KwU5mY8qCCgnJj7sKuxPxF5
+* DGB : DMMnWxmyp4iU1TKCV1eTNpspmNWtRBWeLC
+* [PayPal](https://www.paypal.me/lululombardfr)
