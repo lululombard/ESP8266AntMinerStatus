@@ -193,7 +193,7 @@ String HttpPortal::getAdminConfigP3(int level) {
 	String out = "";
 	if (level >= 1) {
 		out += "\t\t\t<p><label for=\"antminerip\">AntMiner IP</label> <input type=\"text\" name=\"antminerip\" value=\"" + ConfigFile::getConfigAntMinerIp() + "\"/></p>\n";
-		out += "\t\t\t<p><label for=\"coindeskcurrency\">Currency (must be supported by coinbase, empty to disable)</label> <input type=\"text\" name=\"coindeskcurrency\" value=\"" + ConfigFile::getConfigCoindeskCurrency() + "\"/></p>\n";
+		out += "\t\t\t<p><label for=\"coindeskcurrency\">Currency (must be supported by Coindesk, empty to disable)</label> <input type=\"text\" name=\"coindeskcurrency\" value=\"" + ConfigFile::getConfigCoindeskCurrency() + "\"/></p>\n";
 		out += "\t\t\t<p><label for=\"passadmin\">Admin password</label> <input type=\"password\" name=\"passadmin\" value=\"" + ConfigFile::getConfigPassAdmin() + "\"/></p>\n";
 		out += "\t\t\t<p><input type=\"submit\" value=\"Save settings\"/></p>\n";
 		out += "\t\t</div>\n";
