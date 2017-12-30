@@ -37,7 +37,7 @@ void TickScheduler::endTaskAndBeginTask(String taskEnd, String taskBegin) {
 
 void TickScheduler::endTick() {
 	tickTime = millis() - tickTime;
-	if (tickTime >= 1250) {
+	if (tickTime >= 1750) {
 		Serial.print("[WARN] Main thread had to hang for ");
 		Serial.print(tickTime);
 		Serial.println(" ms. Detailed tick time :");
