@@ -2,6 +2,10 @@
 A software to monitor an AntMiner from Bitmain for the ESP8266.
 Tested with an AntMiner S9 (January 2018 batch). Should work with any ccminer compatible hardware if AntMiner.cpp complies to your needs.
 
+# Screenshots
+![Config status page](https://i.imgur.com/JDwoEm9.png)
+![LCD screen](https://i.imgur.com/RQpFZCU.jpg)
+
 # Features
 * Displays global hasrate of the miner
 * Displays the hashrate and temp of each board
@@ -23,10 +27,6 @@ Use the [ESP8266 core for Arduino](https://github.com/esp8266/Arduino) and flash
 * Set everything up, **don't forget to change the default password**
 * Reboot the ESP
 * Done.
-
-# Screenshots
-![Config status page](https://i.imgur.com/JDwoEm9.png)
-![LCD screen](https://i.imgur.com/RQpFZCU.jpg)
 
 # Dependencies
 * [fdebrabander's I2C LCD library](https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library)
