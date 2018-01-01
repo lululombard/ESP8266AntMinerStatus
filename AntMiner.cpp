@@ -164,23 +164,34 @@ void AntMiner::errorScreen() {
 	LcdUtils::getLcd()->setCursor(0, 1);
 	LcdUtils::getLcd()->print("A JSON error occured");
 	LcdUtils::getLcd()->setCursor(0, 2);
-	LcdUtils::getLcd()->print("Check settings, WiFi");
+	LcdUtils::getLcd()->print("Check miner and conf");
 	LcdUtils::getLcd()->setCursor(0, 3);
-	LcdUtils::getLcd()->print("and the AntMiner.   ");
+	LcdUtils::getLcd()->print("Will restart soon...");
 }
 
 void AntMiner::doTick() {
 	if (millis() - millisec > 2500 || millis() < millisec) {
 		millisec = millis();
+		Serial.print("[INFO] Memory available before readFromApi() : ");
+		Serial.println(ESP.getFreeHeap());
 		if (readFromApi()) {
 			refreshScreen();
 		}
 		else if (errCount >= 10) {
 			errorScreen();
+			if (errCount >= 20) {
+				ESP.restart();
+			}
 		}
+		Serial.print("[INFO] Memory available after readFromApi() : ");
+		Serial.println(ESP.getFreeHeap());
 	}
 	else if (millis() - coindeskmillisec > 30000 || millis() < coindeskmillisec) {
 		coindeskmillisec = millis();
+		Serial.print("[INFO] Memory available before readCoindeskApi() : ");
+		Serial.println(ESP.getFreeHeap());
 		readCoindeskApi();
+		Serial.print("[INFO] Memory available after readCoindeskApi() : ");
+		Serial.println(ESP.getFreeHeap());
 	}
 }
